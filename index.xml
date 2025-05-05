@@ -1,1 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Example Site</title><link>https://example.com/</link><description>Recent content on Example Site</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Example Person</copyright><lastBuildDate/><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pomfret's Blog</title><link>https://pomfret27.github.io/</link><description>Recent content on Pomfret's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Pomfret</copyright><lastBuildDate>Mon, 05 May 2025 00:25:56 +0800</lastBuildDate><atom:link href="https://pomfret27.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Newpost</title><link>https://pomfret27.github.io/p/newpost/</link><pubDate>Mon, 05 May 2025 00:25:56 +0800</pubDate><guid>https://pomfret27.github.io/p/newpost/</guid><description>&lt;h2 id="出题篇">出题篇
+&lt;/h2>&lt;h3 id="科幻电影迷">科幻电影迷
+&lt;/h3>&lt;p>我看到宇宙人了。&lt;/p>
+&lt;p>请各位放心，我现在十分甚至九分的清醒。那是早上我去上学的时候，我一如既往地路过那一片河堤，那时，我看到了，浑身绿色的家伙在草地上滚来滚去。我忍不住揉了揉自己的眼睛，反复确认那是不是哪个摄影棚跑出来的演员。要知道，我对科幻电影的道具和服装很有研究，所以我可以肯定地说这是宇宙人本人友情出演，绝非特殊服装与道具的结合。当我确认那是真的宇宙人时，这位宇宙人先生也停止了翻滚，TA站起来，做起伸展运动，向后弯腰的幅度之大让我进一步确信了其宇宙人的身份。不好，被看到了！TA站直身子，转过来朝向我，用手指了我一下，又指了一下草坪，最后摆出招呼我过来的手势。看似亲切，实则是要杀死我，阅片无数的我知道这种场合下自己必将面临一场追杀或是秒杀。没有时间可以浪费了，我必须赶紧跑。我推倒正好路过的大爷，让他为我抵挡一会，这样就不用白发人送黑发人了。我一路跑到学校，然后和平常一样上了一天学，直到刚才到家才想起宇宙人的事。&lt;/p>
+&lt;hr>
+&lt;h3 id="肌肉爱好者">肌肉爱好者
+&lt;/h3>&lt;p>我看到宇宙人了。&lt;/p>
+&lt;p>请各位放心，我比早上那家伙清醒多了。我是在中午吃完午饭后看到宇宙人的，正准备去睡个午觉。请各位不要质疑我，我确实比他清醒多了，因为见到宇宙人的那一瞬间，我就睡意全无了。我从未见过那么恶心的宇宙人，我并不是指TA长相丑陋，像虫子一样，相反，那一身完美的肌肉可以说是让我垂涎欲滴，但是，TA是深粉色的。如果是普通的粉色，我到不会说什么，现在男性穿着粉色已经是一件很正常的事了；如果是紫色的，我会觉得那是一串巨大的葡萄，也不会有什么反感。但是，他是深粉色的，深到刚好让我作呕的程度。我无法忍受，打算在河堤边找一块石头，狠狠地砸TA一下，但是却一块也找不到。我不死心，仔细寻找，终于还是让我找到了一块好石头，一看就知道拿它砸人很疼。我弯腰下去捡，刚抓到石头就感觉周围变暗了，咽一口口水，我缓缓抬起头，是那恶心的宇宙人。TA把手伸向我，应该说是伸向我手里的石头。我吓得脑袋都转不过来了，只知道自己逃跑了，等我冷静下来，我已经到了学校。上午的课程翘掉了，下午的课程照常上，也没有被老师留下来唠叨翘课的事，回到家我才想起来中午从宇宙人手里逃走了。&lt;/p>
+&lt;hr></description></item><item><title>Archives</title><link>https://pomfret27.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://pomfret27.github.io/archives/</guid><description/></item><item><title>Links</title><link>https://pomfret27.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pomfret27.github.io/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub is the world&amp;#39;s largest software development platform.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://www.typescriptlang.org&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ts-logo-128.jpg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>image&lt;/code> field accepts both local and external images.&lt;/p></description></item><item><title>Search</title><link>https://pomfret27.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pomfret27.github.io/search/</guid><description/></item><item><title>关于</title><link>https://pomfret27.github.io/%E5%85%B3%E4%BA%8E/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pomfret27.github.io/%E5%85%B3%E4%BA%8E/</guid><description>&lt;p>This is a test page for i18n support.&lt;/p></description></item></channel></rss>
