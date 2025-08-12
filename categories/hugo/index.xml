@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Hugo on Pomfret</title>
+        <link>http://localhost:12384/categories/hugo/</link>
+        <description>Recent content in Hugo on Pomfret</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Pomfret</copyright>
+        <lastBuildDate>Tue, 12 Aug 2025 19:13:34 +0800</lastBuildDate><atom:link href="http://localhost:12384/categories/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用 Hugo &#43; Github 搭建个人博客</title>
+        <link>http://localhost:12384/p/build-blog-with-hugo-and-github/</link>
+        <pubDate>Tue, 12 Aug 2025 19:13:34 +0800</pubDate>
+        
+        <guid>http://localhost:12384/p/build-blog-with-hugo-and-github/</guid>
+        <description>&lt;h2 id=&#34;搭建思路&#34;&gt;搭建思路
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Hugo 可以将 Markdown 文件转换为 HTML 文件；&lt;/li&gt;
+&lt;li&gt;GitHub Pages 是 GitHub 提供的一个免费的静态网站托管服务，可用于托管个人网站、博客、文档、项目页面等静态内容；&lt;/li&gt;
+&lt;li&gt;创建 2 个 GitHub 仓库，一个是用于存放博客源文件的博客源仓库，另一个则是用于存放 Hugo 生成的 HTML 文件的 GitHub Pages 仓库；&lt;/li&gt;
+&lt;li&gt;使用 Github Actions 功能实现提交源码后自动发布。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h2&gt;&lt;p&gt;要想使用 Hugo + Github 搭建个人博客，首先要做好以下准备。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;确保网络环境能够稳定地访问 Github；&lt;/li&gt;
+&lt;li&gt;创建 GitHub 账号；&lt;/li&gt;
+&lt;li&gt;安装 VS Code 与 Git；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上内容只要稍加搜索，就能找到大量的教程，在此就不赘述了，接下来讲最后一项准备工作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;“我有东西可以写，我想写，我想一直写。”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你能做到前两点的话，请继续下一步；如果你能做到全部三点的话，也许哪天我就能看见你的博客；如果你连第一点都还做不到的话，不妨先试着写点什么。&lt;/p&gt;
+&lt;h2 id=&#34;安装-hugo&#34;&gt;安装 Hugo
+&lt;/h2&gt;&lt;p&gt;Hugo 的安装方法很多，详情可以参考官方的&lt;a class=&#34;link&#34; href=&#34;https://gohugo.com.cn/installation/windows/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在 Windows 上安装 Hugo&lt;/a&gt;，建议安装扩展版（extended）。&lt;/p&gt;
+&lt;h2 id=&#34;创建-github-仓库&#34;&gt;创建 GitHub 仓库
+&lt;/h2&gt;&lt;h3 id=&#34;创建博客源仓库&#34;&gt;创建博客源仓库
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;给仓库取一个你喜欢的名字（下文使用 &lt;strong&gt;BlogSource&lt;/strong&gt;）；&lt;/li&gt;
+&lt;li&gt;选择 &lt;strong&gt;Private&lt;/strong&gt;，设置为私有仓库；&lt;/li&gt;
+&lt;li&gt;勾选添加 &lt;strong&gt;README&lt;/strong&gt; 文件；&lt;/li&gt;
+&lt;li&gt;创建仓库。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;创建-github-pages-仓库&#34;&gt;创建 GitHub Pages 仓库
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;按照 &lt;code&gt;&amp;lt;username.github.io&amp;gt;&lt;/code&gt; 的格式命名仓库，&lt;code&gt;&amp;lt;username&amp;gt;&lt;/code&gt; 是自己的 GitHub 的用户名；&lt;/li&gt;
+&lt;li&gt;选择 &lt;strong&gt;Public&lt;/strong&gt;，设置为公开仓库；&lt;/li&gt;
+&lt;li&gt;勾选添加 &lt;strong&gt;README&lt;/strong&gt; 文件；&lt;/li&gt;
+&lt;li&gt;创建仓库。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;克隆博客源仓库到本地&#34;&gt;克隆博客源仓库到本地
+&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

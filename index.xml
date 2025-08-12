@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pomfret</title><link>https://pomfret27.github.io/</link><description>Recent content on Pomfret</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Pomfret</copyright><lastBuildDate>Sat, 10 May 2025 21:44:36 +0800</lastBuildDate><atom:link href="https://pomfret27.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>我最爱的宝可梦</title><link>https://pomfret27.github.io/p/my-favorite-pokemon/</link><pubDate>Sat, 10 May 2025 21:44:36 +0800</pubDate><guid>https://pomfret27.github.io/p/my-favorite-pokemon/</guid><description>&lt;div style="text-align: center; font-size: 80px;">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pomfret</title><link>https://pomfret27.github.io/</link><description>Recent content on Pomfret</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Pomfret</copyright><lastBuildDate>Tue, 12 Aug 2025 19:13:34 +0800</lastBuildDate><atom:link href="https://pomfret27.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Hugo + Github 搭建个人博客</title><link>https://pomfret27.github.io/p/build-blog-with-hugo-and-github/</link><pubDate>Tue, 12 Aug 2025 19:13:34 +0800</pubDate><guid>https://pomfret27.github.io/p/build-blog-with-hugo-and-github/</guid><description>&lt;h2 id="搭建思路">搭建思路
+&lt;/h2>&lt;ol>
+&lt;li>Hugo 可以将 Markdown 文件转换为 HTML 文件；&lt;/li>
+&lt;li>GitHub Pages 是 GitHub 提供的一个免费的静态网站托管服务，可用于托管个人网站、博客、文档、项目页面等静态内容；&lt;/li>
+&lt;li>创建 2 个 GitHub 仓库，一个是用于存放博客源文件的博客源仓库，另一个则是用于存放 Hugo 生成的 HTML 文件的 GitHub Pages 仓库；&lt;/li>
+&lt;li>使用 Github Actions 功能实现提交源码后自动发布。&lt;/li>
+&lt;/ol>
+&lt;h2 id="准备工作">准备工作
+&lt;/h2>&lt;p>要想使用 Hugo + Github 搭建个人博客，首先要做好以下准备。&lt;/p>
+&lt;ol>
+&lt;li>确保网络环境能够稳定地访问 &lt;strong>Github&lt;/strong>；&lt;/li>
+&lt;li>创建 &lt;strong>GitHub&lt;/strong> 账号；&lt;/li>
+&lt;li>安装 &lt;strong>VS Code&lt;/strong> 与 &lt;strong>Git&lt;/strong>；&lt;/li>
+&lt;/ol>
+&lt;p>以上内容只要稍加搜索，就能找到大量的教程，在此就不赘述了，接下来讲最后一项准备工作。&lt;/p>
+&lt;p>&lt;strong>“我有东西可以写，我想写，我想一直写。”&lt;/strong>&lt;/p>
+&lt;p>如果你能做到前两点的话，请继续下一步；如果你能做到全部三点的话，也许哪天我就能看见你的博客；如果你连第一点都还做不到的话，不妨先试着写点什么。&lt;/p>
+&lt;h2 id="安装-hugo">安装 Hugo
+&lt;/h2>&lt;p>Hugo 的安装方法很多，详情可以参考官方的&lt;a class="link" href="https://gohugo.com.cn/installation/windows/" target="_blank" rel="noopener"
+>在 Windows 上安装 Hugo&lt;/a>，建议安装扩展版（extended）。&lt;/p>
+&lt;h2 id="创建-github-仓库">创建 GitHub 仓库
+&lt;/h2>&lt;h3 id="创建博客源仓库">创建博客源仓库
+&lt;/h3>&lt;ol>
+&lt;li>给仓库取一个你喜欢的名字（比如我用的是 &lt;strong>BlogSource&lt;/strong>）；&lt;/li>
+&lt;li>选择 &lt;strong>Private&lt;/strong>，设置为私有仓库；&lt;/li>
+&lt;li>勾选添加 &lt;strong>README&lt;/strong> 文件；&lt;/li>
+&lt;li>创建仓库。&lt;/li>
+&lt;/ol>
+&lt;h3 id="创建-github-pages-仓库">创建 GitHub Pages 仓库
+&lt;/h3>&lt;ol>
+&lt;li>按照 &lt;code>&amp;lt;username.github.io&amp;gt;&lt;/code> 的格式命名仓库，&lt;code>&amp;lt;username&amp;gt;&lt;/code> 是自己的 GitHub 的用户名；&lt;/li>
+&lt;li>选择 &lt;strong>Public&lt;/strong>，设置为公开仓库；&lt;/li>
+&lt;li>勾选添加 &lt;strong>README&lt;/strong> 文件；&lt;/li>
+&lt;li>创建仓库。&lt;/li>
+&lt;/ol>
+&lt;h2 id="克隆博客源仓库到本地">克隆博客源仓库到本地
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>创建项目文件夹（比如我用的是 &lt;strong>Blog&lt;/strong>）；&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>使用 &lt;code>cd&lt;/code> 命令进入该文件夹（从此处开始建议使用 VS Code）；&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">&lt;span class="k">cd&lt;/span> Blog
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>克隆&lt;strong>博客源仓库&lt;/strong>到项目文件夹，克隆时使用的 HTTPS 仓库链接在这里查看；&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">git clone https://github.com/Pomfret27/BlogSource.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>此处直接将 GitHub 上的远程仓库克隆到了本地，所以没必要再对仓库进行初始化，也不需要设置远程地址。&lt;/p>
+&lt;h2 id="使用-hugo-创建网站">使用 Hugo 创建网站
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>使用 &lt;code>hugo new site [path] [flags]&lt;/code> 命令可以在提供的目录中创建新的站点；&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>这里我选择在 &lt;code>Blog&lt;/code> 文件夹下创建 &lt;code>BlogSource&lt;/code> 站点，由于克隆下来的 &lt;code>BlogSource&lt;/code> 文件夹非空，需要在命令后加上 &lt;code>-f&lt;/code>来强制初始化；&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">hugo new site BlogSource -f
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>新的站点会有正确的结构，但尚无内容或主题，为了方便后续的操作，可以先选择一个有演示站点的主题。&lt;/li>
+&lt;/ol>
+&lt;h2 id="配置主题">配置主题
+&lt;/h2>&lt;ol>
+&lt;li>先到&lt;a class="link" href="https://themes.gohugo.io/" target="_blank" rel="noopener"
+>官方的主题市场&lt;/a>选择一个喜欢的主题，下面我以自己使用的 &lt;strong>Stack&lt;/strong> 为例；&lt;/li>
+&lt;li>一般主题的说明文档都会有安装相关的指导，各种主题存在差异，Stack 主题的安装可以参考&lt;a class="link" href="https://stack-docs.netlify.app/zh/getting-started" target="_blank" rel="noopener"
+>这个&lt;/a>；&lt;/li>
+&lt;li>如果主题有演示站点 &lt;code>exampleSite&lt;/code> 文件夹，可以讲其中的 &lt;code>content&lt;/code> 文件夹和 &lt;code>toml&lt;/code> 或是 &lt;code>yaml&lt;/code> 文件复制到站点目录，并删除原先的 &lt;code>hugo.toml&lt;/code> 文件；&lt;/li>
+&lt;li>将复制过来的配置文件中的 &lt;strong>baseURL&lt;/strong> 改为自己的网址 &lt;code>https://&amp;lt;username&amp;gt;.github.io/&lt;/code>，其他的修改可以等到网站搭建完成后再说。&lt;/li>
+&lt;/ol>
+&lt;h2 id="使用-hugo-新建文章">使用 Hugo 新建文章
+&lt;/h2>&lt;p>先使用 &lt;code>cd&lt;/code> 命令进入站点目录，再使用 &lt;code>hugo new xxx.md&lt;/code> 命令创建文章。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">&lt;span class="k">cd&lt;/span> BlogSource
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo new xxx.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="本地调试和预览">本地调试和预览
+&lt;/h2>&lt;ol>
+&lt;li>使用 &lt;code>hugo server&lt;/code> 命令构建网站，如果想要清理未使用的缓存文件，可以在命令后面加上 &lt;code>--gc&lt;/code>；&lt;/li>
+&lt;li>执行命令后，使用 &lt;code>Ctrl + 单击&lt;/code> 打开终端中显示的链接 &lt;code>http://localhost:1313/&lt;/code>，端口后默认为1313，可能会发生变化；&lt;/li>
+&lt;li>由于 Hugo 的构建速度很快，几乎可以即时地保存和查看更改。&lt;/li>
+&lt;/ol></description></item><item><title>我最爱的宝可梦</title><link>https://pomfret27.github.io/p/my-favorite-pokemon/</link><pubDate>Sat, 10 May 2025 21:44:36 +0800</pubDate><guid>https://pomfret27.github.io/p/my-favorite-pokemon/</guid><description>&lt;div style="text-align: center; font-size: 80px;">
 玛力露丽
 &lt;/div>
 &lt;img src="https://cdn.jsdelivr.net/gh/pomfret27/Image-Hosting@main/blog/%E7%8E%9B%E5%8A%9B%E9%9C%B2%E4%B8%BD-%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF.png" alt="玛力露丽" title="玛力露丽" style="zoom: 80%;" />
