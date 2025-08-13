@@ -26,6 +26,7 @@
 &lt;li>勾选添加 &lt;strong>README&lt;/strong> 文件；&lt;/li>
 &lt;li>创建仓库。&lt;/li>
 &lt;/ol>
+&lt;center>&lt;img src="assets/博客源仓库.png" alt="博客源仓库" />&lt;/center>
 &lt;h3 id="创建-github-pages-仓库">创建 GitHub Pages 仓库
 &lt;/h3>&lt;ol>
 &lt;li>按照 &lt;code>&amp;lt;username.github.io&amp;gt;&lt;/code> 的格式命名仓库，&lt;code>&amp;lt;username&amp;gt;&lt;/code> 是自己的 GitHub 的用户名；&lt;/li>
@@ -33,6 +34,7 @@
 &lt;li>勾选添加 &lt;strong>README&lt;/strong> 文件；&lt;/li>
 &lt;li>创建仓库。&lt;/li>
 &lt;/ol>
+&lt;center>&lt;img src="assets/GitHub_Pages_仓库.png" alt="GitHub Pages 仓库" />&lt;/center>
 &lt;h2 id="克隆博客源仓库到本地">克隆博客源仓库到本地
 &lt;/h2>&lt;ol>
 &lt;li>
@@ -92,7 +94,7 @@
 &lt;li>将复制过来的配置文件中的 &lt;strong>baseURL&lt;/strong> 改为自己的网址 &lt;code>https://&amp;lt;username&amp;gt;.github.io/&lt;/code>，其他的修改可以等到网站搭建完成后再说。&lt;/li>
 &lt;/ol>
 &lt;h2 id="使用-hugo-新建文章">使用 Hugo 新建文章
-&lt;/h2>&lt;p>先使用 &lt;code>cd&lt;/code> 命令进入站点目录，再使用 &lt;code>hugo new xxx.md&lt;/code> 命令创建文章。&lt;/p>
+&lt;/h2>&lt;p>先使用 &lt;code>cd&lt;/code> 命令进入站点目录，再使用 &lt;code>hugo new xxx.md&lt;/code> 命令创建文章。这里先新建一篇空白文章，保证下一步本地预览的时候有文章就行。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -100,7 +102,7 @@
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">&lt;span class="k">cd&lt;/span> BlogSource
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo new xxx.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo new post xxx.md
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="本地调试和预览">本地调试和预览
@@ -108,10 +110,153 @@
 &lt;li>使用 &lt;code>hugo server&lt;/code> 命令构建网站，如果想要清理未使用的缓存文件，可以在命令后面加上 &lt;code>--gc&lt;/code>；&lt;/li>
 &lt;li>执行命令后，使用 &lt;code>Ctrl + 单击&lt;/code> 打开终端中显示的链接 &lt;code>http://localhost:1313/&lt;/code>，端口后默认为1313，可能会发生变化；&lt;/li>
 &lt;li>由于 Hugo 的构建速度很快，几乎可以即时地保存和查看更改。&lt;/li>
-&lt;/ol></description></item><item><title>我最爱的宝可梦</title><link>https://pomfret27.github.io/p/my-favorite-pokemon/</link><pubDate>Sat, 10 May 2025 21:44:36 +0800</pubDate><guid>https://pomfret27.github.io/p/my-favorite-pokemon/</guid><description>&lt;div style="text-align: center; font-size: 80px;">
+&lt;/ol>
+&lt;h2 id="github-自动部署">GitHub 自动部署
+&lt;/h2>&lt;h3 id="生成-token">生成 token
+&lt;/h3>&lt;ol>
+&lt;li>打开 &lt;strong>GitHub&lt;/strong>，点击右上角的头像，再点击 &lt;strong>Settings&lt;/strong>；&lt;/li>
+&lt;li>下拉页面，点击左侧的 &lt;strong>Developer Settings&lt;/strong>；&lt;/li>
+&lt;li>点击左侧的 &lt;strong>Personal access tokens&lt;/strong>，再点击 &lt;strong>Tokens (classic)&lt;/strong>;&lt;/li>
+&lt;li>点击右侧的 &lt;strong>Generate new token&lt;/strong>，然后选择下面那个 &lt;strong>Generate new token (classic)&lt;/strong>；&lt;/li>
+&lt;/ol>
+&lt;center>&lt;img src="assets/Generate_new_token.png" alt="Generate_new_token" />&lt;/center>
+&lt;ol start="5">
+&lt;li>选择 token 到期时间，勾选 token 的访问范围，然后点击 &lt;strong>Generate token&lt;/strong> 生成 token；&lt;/li>
+&lt;/ol>
+&lt;center>&lt;img src="assets/Generate_token.png" alt="生成 token" />&lt;/center>
+&lt;ol start="6">
+&lt;li>生成的 token 只显示一次，所以一定要复制保存下来；&lt;/li>
+&lt;/ol>
+&lt;h3 id="添加-secret">添加 secret
+&lt;/h3>&lt;ol>
+&lt;li>复制 token 后打开博客源仓库，点击 &lt;strong>Settings&lt;/strong>，点击左侧的 &lt;strong>Secrets and variables&lt;/strong>，点击 &lt;strong>Actions&lt;/strong>；&lt;/li>
+&lt;/ol>
+&lt;center>&lt;img src="assets/Actions_secrets.png" alt="Actions secrets" />&lt;/center>
+&lt;ol start="2">
+&lt;li>填写 Secret 名称，并将前面复制的 token 粘贴到 Secret 框中，添加 secret。&lt;/li>
+&lt;/ol>
+&lt;center>&lt;img src="assets/Add_secret.png" alt="添加 secret" />&lt;/center>
+&lt;h3 id="配置-github-actions">配置 GitHub Actions
+&lt;/h3>&lt;p>这里先附上官方的 &lt;a class="link" href="https://github.com/marketplace/actions/hugo-setup" target="_blank" rel="noopener"
+>GitHub Actions for Hugo&lt;/a>，感兴趣的可以自己看一下。&lt;/p>
+&lt;ol>
+&lt;li>创建 workflow，在仓库根目录创建 &lt;code>.github&lt;/code> 文件夹，再在里面创建 &lt;code>workflows&lt;/code> 文件夹，之后创建一个 &lt;code>gh-pages.yml&lt;/code> 文件，这个文件的名字也可以自取；&lt;/li>
+&lt;li>将下面的内容复制进 yml 文件；&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub Pages &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c">#名字自取&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">main &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 这里的意思是当 main分支发生push的时候，运行下面的jobs，这里先改为github-actions&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">pull_request&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 任务名自取&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 在什么环境运行任务&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">concurrency&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">group&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ github.workflow }}-${{ github.ref }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v4&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 引用actions/checkout这个action，与所在的github仓库同名&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">submodules&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Fetch Hugo themes (true OR recursive)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">fetch-depth&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Fetch all history for .GitInfo and .Lastmod&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Setup Hugo &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 步骤名自取&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-hugo@v3&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># hugo官方提供的action，用于在任务环境中获取hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">hugo-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;latest&amp;#39;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 获取最新版本的hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">extended&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 是否使用extended版本的hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hugo --minify&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 使用hugo构建静态网页&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Deploy&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-gh-pages@v3&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 一个自动发布github pages的action&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">if&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">github.ref == &amp;#39;refs/heads/main&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># github_token: ${{ secrets.GITHUB_TOKEN }} 该项适用于发布到源码相同repo的情况，不能用于发布到其他repo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">external_repository&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io # 发布到哪个repo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">personal_token&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.YOUR_SECRET_NAME }} # 发布到其他repo需要提供上面生成的personal access token&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./public # 注意这里指的是要发布哪个文件夹的内容，而不是指发布到目的仓库的什么位置，因为hugo默认生成静态网页到public文件夹，所以这里发布public文件夹里的内容&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_branch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">main # 发布到哪个branch&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>修改 &lt;code>external_repository&lt;/code> 为自己的 &lt;strong>GitHub Pages 仓库&lt;/strong>，把 &lt;code>personal_token&lt;/code> 的 &lt;code>YOUR_SECRET_NAME&lt;/code> 改成前面设置的 &lt;strong>secret&lt;/strong> 名称，如果使用了扩展版的 Hugo，还可以将 &lt;code>extended&lt;/code> 改成 &lt;strong>true&lt;/strong>。&lt;/li>
+&lt;/ol>
+&lt;h2 id="发布内容">发布内容
+&lt;/h2>&lt;p>在本地写完文章，并用 &lt;code>hugo server&lt;/code> 命令在 &lt;code>public&lt;/code> 文件夹下生成静态网页后，只需要将本地仓库的内容推送到远程的&lt;strong>博客源仓库&lt;/strong>，过一段时间，&lt;strong>GitHub Actions&lt;/strong> 就会将博客源仓库的 &lt;code>public&lt;/code> 文件夹的内容推送到 &lt;strong>GitHub Pages 仓库&lt;/strong>，这样就可以通过 &lt;a class="link" href="https://pomfret27.github.io" target="_blank" rel="noopener"
+>https://pomfret27.github.io&lt;/a> 来访问博客网站了。&lt;/p>
+&lt;p>推送本地仓库可以使用下面的 git 命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">git add .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;提交信息&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push origin main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>上面三条命令先后完成了&lt;strong>暂存&lt;/strong>、&lt;strong>提交&lt;/strong>、&lt;strong>推送&lt;/strong>三个操作，其中提交信息是必须填写的。&lt;/p>
+&lt;p>如果不想每次都手打命令，还可以使用 &lt;strong>VS Code&lt;/strong> 的源代码管理功能。&lt;/p>
+&lt;center>&lt;img src="assets/源代码管理.png" alt="源代码管理" />&lt;/center>
+&lt;p>步骤也是一样，先点击更改的加号来暂存所有更改，再输入提交信息，并点击提交按钮，提交完成后提交两字会变为同步，点击同步按钮即可完成推送。&lt;/p>
+&lt;p>如果你想要提交信息变得规范一些，可以安装 &lt;strong>git-commit-plugin&lt;/strong> 插件来寻求帮助。&lt;/p>
+&lt;h2 id="参考文献">参考文献
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://krislinzhao.github.io/docs/create-a-wesite-using-github-pages-and-hugo/" target="_blank" rel="noopener"
+>krislin. 如何用 GitHub Pages + Hugo 搭建个人博客&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="碎碎念">碎碎念
+&lt;/h2>&lt;p>文章中的部分内容并没有详细阐述，这部分内容将拆分到其他文章中，可以点击文章顶部的分类和底部的标签来查看相关文章哦。&lt;/p></description></item><item><title>我最爱的宝可梦</title><link>https://pomfret27.github.io/p/my-favorite-pokemon/</link><pubDate>Sat, 10 May 2025 21:44:36 +0800</pubDate><guid>https://pomfret27.github.io/p/my-favorite-pokemon/</guid><description>&lt;div style="text-align: center; font-size: 80px;">
 玛力露丽
 &lt;/div>
-&lt;img src="https://cdn.jsdelivr.net/gh/pomfret27/Image-Hosting@main/blog/%E7%8E%9B%E5%8A%9B%E9%9C%B2%E4%B8%BD-%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF.png" alt="玛力露丽" title="玛力露丽" style="zoom: 80%;" />
+&lt;center>&lt;img src="assets/玛力露丽.png" alt="玛力露丽" title="玛力露丽" style="zoom: 80%;" />&lt;/center>
 &lt;p style="font-size: 1.2em; line-height: 1.6;">
 喜不喜欢我高贵的
 &lt;span style="font-size: 2em; font-weight: bold; color: #5185c5;">水&lt;/span>
@@ -120,8 +265,8 @@
 属性？！
 &lt;/p>
 &lt;div style="display: flex; gap: 10px; justify-content: center;">
-&lt;img src="https://cdn.jsdelivr.net/gh/pomfret27/Image-Hosting@main/blog/type_03-%E6%B0%B4.svg" alt="水属性" style="width: 150px; height: auto;">
-&lt;img src="https://cdn.jsdelivr.net/gh/pomfret27/Image-Hosting@main/blog/type_18-%E5%A6%96%E7%B2%BE.svg" alt="妖精属性" style="width: 150px; height: auto;">
+&lt;img src="assets/type_03_水.svg" alt="水属性" style="width: 150px; height: auto;">
+&lt;img src="assets/type_18_妖精.svg" alt="妖精属性" style="width: 150px; height: auto;">
 &lt;/div>
 &lt;p style="font-size: 1.2em; line-height: 1.6;">
 告诉你，Ag老师都叫我
@@ -160,7 +305,7 @@
 &lt;span style="font-size: 2em; font-weight: bold; color: #fef03e;">有多可爱&lt;/span>
 &lt;span style="font-size: 2em; font-weight: bold; ">！！！&lt;/span>
 &lt;/p>
-&lt;img src="https://cdn.jsdelivr.net/gh/pomfret27/Image-Hosting@main/blog/%E7%8E%9B%E5%8A%9B%E9%9C%B2%E4%B8%BD-%E9%97%AA%E5%85%89-%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF.png" alt="闪光玛力露丽" title="闪光玛力露丽" style="zoom:150%;" />
+&lt;center>&lt;img src="assets/玛力露丽-闪光.png" alt="闪光玛力露丽" title="闪光玛力露丽" style="zoom: 150%;" />&lt;/center>
 &lt;p style="font-size: 1.2em; line-height: 1.6;">
 看到这了，你还不喜欢我，那你也是个
 &lt;span style="font-size: 2em; font-weight: bold; color: #7f8c8d;">神人&lt;/span>
