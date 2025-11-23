@@ -1,0 +1,15 @@
+{
+  "name": "Pomfret's Library",
+  "short_name": "Pomfret's Library",
+  "start_url": "/docs/",
+  "scope": "/docs/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/docs/favicon.svg",
+      "sizes": "512x512"
+    }
+  ]
+}
