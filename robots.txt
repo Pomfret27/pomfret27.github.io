@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://pomfret27.github.io/sitemap.xml
