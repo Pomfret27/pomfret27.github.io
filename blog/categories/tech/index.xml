@@ -230,7 +230,7 @@
 &lt;li&gt;勾选添加 &lt;strong&gt;README&lt;/strong&gt; 文件；&lt;/li&gt;
 &lt;li&gt;创建仓库。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;center&gt;&lt;img src="GitHub_Pages_仓库.png" alt="GitHub Pages 仓库" title="GitHub Pages 仓库" /&gt;&lt;/center&gt;
+&lt;center&gt;&lt;img src="gitHub_pages_repo.png" alt="GitHub Pages 仓库" title="GitHub Pages 仓库" /&gt;&lt;/center&gt;
 &lt;h2 id="克隆博客源仓库到本地"&gt;克隆博客源仓库到本地
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
@@ -315,11 +315,11 @@
 &lt;li&gt;点击左侧的 &lt;strong&gt;Personal access tokens&lt;/strong&gt;，再点击 &lt;strong&gt;Tokens (classic)&lt;/strong&gt;;&lt;/li&gt;
 &lt;li&gt;点击右侧的 &lt;strong&gt;Generate new token&lt;/strong&gt;，然后选择下面那个 &lt;strong&gt;Generate new token (classic)&lt;/strong&gt;；&lt;/li&gt;
 &lt;/ol&gt;
-&lt;center&gt;&lt;img src="Generate_new_token.png" alt="Generate new token" title="Generate new token" /&gt;&lt;/center&gt;
+&lt;center&gt;&lt;img src="generate_new_token.png" alt="Generate new token" title="Generate new token" /&gt;&lt;/center&gt;
 &lt;ol start="5"&gt;
 &lt;li&gt;选择 token 到期时间，勾选 token 的访问范围，然后点击 &lt;strong&gt;Generate token&lt;/strong&gt; 生成 token；&lt;/li&gt;
 &lt;/ol&gt;
-&lt;center&gt;&lt;img src="Generate_token.png" alt="生成 token" title="生成 token" /&gt;&lt;/center&gt;
+&lt;center&gt;&lt;img src="generate_token.png" alt="生成 token" title="生成 token" /&gt;&lt;/center&gt;
 &lt;ol start="6"&gt;
 &lt;li&gt;生成的 token 只显示一次，所以一定要复制保存下来；&lt;/li&gt;
 &lt;/ol&gt;
@@ -327,11 +327,11 @@
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;复制 token 后打开博客源仓库，点击 &lt;strong&gt;Settings&lt;/strong&gt;，点击左侧的 &lt;strong&gt;Secrets and variables&lt;/strong&gt;，点击 &lt;strong&gt;Actions&lt;/strong&gt;；&lt;/li&gt;
 &lt;/ol&gt;
-&lt;center&gt;&lt;img src="Actions_secrets.png" alt="Actions secrets" title="Actions secrets" /&gt;&lt;/center&gt;
+&lt;center&gt;&lt;img src="actions_secrets.png" alt="Actions secrets" title="Actions secrets" /&gt;&lt;/center&gt;
 &lt;ol start="2"&gt;
 &lt;li&gt;填写 Secret 名称，并将前面复制的 token 粘贴到 Secret 框中，添加 secret。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;center&gt;&lt;img src="Add_secret.png" alt="添加 secret" title="添加 secret" /&gt;&lt;/center&gt;
+&lt;center&gt;&lt;img src="add_secret.png" alt="添加 secret" title="添加 secret" /&gt;&lt;/center&gt;
 &lt;h3 id="配置-github-actions"&gt;配置 GitHub Actions
 &lt;/h3&gt;&lt;p&gt;这里先附上官方的 &lt;a class="link" href="https://github.com/marketplace/actions/hugo-setup" target="_blank" rel="noopener"
 &gt;GitHub Actions for Hugo&lt;/a&gt;，感兴趣的可以自己看一下。&lt;/p&gt;
