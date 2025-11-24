@@ -1,16 +1,20 @@
 const cacheName = self.location.pathname
 const pages = [
 
-  "/docs/docs/home/",
-  "/docs/docs/blog/",
+  "/docs/docs/cheatsheet/git/command/",
+  "/docs/docs/cheatsheet/hugo/command/",
+  "/docs/docs/cheatsheet/git/gitignore/",
+  "/docs/docs/cheatsheet/git/",
   "/docs/docs/cheatsheet/",
+  "/docs/docs/cheatsheet/hugo/",
+  "/docs/docs/software/",
   "/docs/categories/",
   "/docs/docs/",
   "/docs/tags/",
   "/docs/",
   "/docs/book.min.c6771de2b717b3a99f7c695926d0a9b4813cfb30ae5b8563d1d24cc7b3e5643e.css",
-  "/docs/zh.search-data.min.4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945.json",
-  "/docs/zh.search.min.35a3ffcee9ca1c8c9ccdca3172ac31399c3666981769a91b0ffcac3a4bae47a1.js",
+  "/docs/zh.search-data.min.19e7f4b0ced1d77c275ed99f73679ca4dfe412cbb9f585ef0ad16e5fcb3e0792.json",
+  "/docs/zh.search.min.debddd0f06a2121be9a341602d712489c412bfd8fe68c6e7c511cc244545ee15.js",
   
 ];
 
