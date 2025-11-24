@@ -1,4 +1,200 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>科技 on Pomfret's Blog</title><link>https://pomfret27.github.io/blog/categories/technology/</link><description>Recent content in 科技 on Pomfret's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Pomfret</copyright><lastBuildDate>Tue, 12 Aug 2025 19:13:34 +0800</lastBuildDate><atom:link href="https://pomfret27.github.io/blog/categories/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Hugo + Github 搭建个人博客</title><link>https://pomfret27.github.io/blog/p/build-blog-with-hugo-and-github/</link><pubDate>Tue, 12 Aug 2025 19:13:34 +0800</pubDate><guid>https://pomfret27.github.io/blog/p/build-blog-with-hugo-and-github/</guid><description>&lt;h2 id="搭建思路"&gt;搭建思路
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>科技 on Pomfret's Blog</title><link>https://pomfret27.github.io/blog/categories/technology/</link><description>Recent content in 科技 on Pomfret's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Pomfret</copyright><lastBuildDate>Tue, 02 Sep 2025 20:21:54 +0800</lastBuildDate><atom:link href="https://pomfret27.github.io/blog/categories/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>「盘古之白」| 基本规则与实际问题</title><link>https://pomfret27.github.io/blog/p/pangu/</link><pubDate>Tue, 02 Sep 2025 20:21:54 +0800</pubDate><guid>https://pomfret27.github.io/blog/p/pangu/</guid><description>&lt;h2 id="介绍"&gt;介绍
+&lt;/h2&gt;&lt;p&gt;我已经不记得是什么时候知道「盘古之白」的了，但我记得当时看到过一段有趣的话。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;漢學家稱這個空白字元為「盤古之白」，因為它劈開了全形字和半形字之間的混沌。另有研究顯示，打字的時候不喜歡在中文和英文之間加空格的人，感情路都走得很辛苦，有七成的比例會在 34 歲的時候跟自己不愛的人結婚，而其餘三成的人最後只能把遺產留給自己的貓。畢竟愛情跟書寫都需要適時地留白。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这段话的原出处是 &lt;a class="link" href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener"
+&gt;https://github.com/vinta/pangu.js&lt;/a&gt;，感兴趣的可以去看看。&lt;/p&gt;
+&lt;p&gt;「盘古之白」指的是中文和半角的英文、数字、符号之间需要加入的空格，它能让文字看起来更加舒服，下面我们来简单对比一下。&lt;/p&gt;
+&lt;p&gt;这是没有「盘古之白」的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的IQ是250，身高2m，体重50kg，我用2500元买了一台iPhone，并且在YouTube上直播开箱，结果发现是价值高达2.5元的儿童玩具。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是有「盘古之白」的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的 IQ 是 250，身高 2 m，体重 50 kg，我用 2500 元买了一台 iPhone，并且在 YouTube 上直播开箱，结果发现是价值高达 2.5 元的儿童玩具。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也许你平时并没有打空格的习惯，但你平时看到的文字大概是已经添加了留白的。你可以把没有「盘古之白」的那段话复制到微信里，然后发送，看看是不是更接近有「盘古之白」的版本。&lt;/p&gt;
+&lt;h2 id="基本规则"&gt;基本规则
+&lt;/h2&gt;&lt;h3 id="空格"&gt;空格
+&lt;/h3&gt;&lt;h4 id="中英文之间需要增加空格"&gt;中英文之间需要增加空格
+&lt;/h4&gt;&lt;p&gt;正确：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 LeanCloud 上，数据存储是围绕 &lt;code&gt;AVObject&lt;/code&gt; 进行的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在LeanCloud上，数据存储是围绕&lt;code&gt;AVObject&lt;/code&gt;进行的。&lt;/p&gt;
+&lt;p&gt;在 LeanCloud上，数据存储是围绕&lt;code&gt;AVObject&lt;/code&gt; 进行的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;完整的正确用法：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 LeanCloud 上，数据存储是围绕 &lt;code&gt;AVObject&lt;/code&gt; 进行的。每个 &lt;code&gt;AVObject&lt;/code&gt; 都包含了与 JSON 兼容的 key-value 对应的数据。数据是 schema-free 的，你不需要在每个 &lt;code&gt;AVObject&lt;/code&gt; 上提前指定存在哪些键，只要直接设定对应的 key-value 即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例外：「豆瓣FM」等产品名词，按照官方所定义的格式书写。&lt;/p&gt;
+&lt;h4 id="中文与数字之间需要增加空格"&gt;中文与数字之间需要增加空格
+&lt;/h4&gt;&lt;p&gt;正确：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今天出去买菜花了 5000 元。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今天出去买菜花了 5000元。&lt;/p&gt;
+&lt;p&gt;今天出去买菜花了5000元。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="数字和单位之间需要增加空格"&gt;数字和单位之间需要增加空格
+&lt;/h4&gt;&lt;p&gt;正确：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我家的光纤入屋宽带有 10 Gbps，SSD 一共有 20 TB&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我家的光纤入屋宽带有 10Gbps，SSD 一共有 20TB&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例外：度数／百分比与数字之间不需要增加空格：&lt;/p&gt;
+&lt;p&gt;正确：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;角度为 90° 的角，就是直角。&lt;/p&gt;
+&lt;p&gt;新 MacBook Pro 有 15% 的 CPU 性能提升。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;角度为 90 ° 的角，就是直角。&lt;/p&gt;
+&lt;p&gt;新 MacBook Pro 有 15 % 的 CPU 性能提升。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="全角标点与其他字符之间不加空格"&gt;全角标点与其他字符之间不加空格
+&lt;/h4&gt;&lt;p&gt;正确：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;刚刚买了一部 iPhone，好开心！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;刚刚买了一部 iPhone ，好开心！&lt;/p&gt;
+&lt;p&gt;刚刚买了一部 iPhone， 好开心！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="全角和半角"&gt;全角和半角
+&lt;/h3&gt;&lt;h4 id="中文环境使用全角符号"&gt;中文环境使用全角符号
+&lt;/h4&gt;&lt;p&gt;正确：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;嗨！你知道嘛？今天前台的小妹跟我说「喵」了哎！&lt;/p&gt;
+&lt;p&gt;核磁共振成像（NMRI）是什么原理都不知道？JFGI！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;嗨! 你知道嘛? 今天前台的小妹跟我说 &amp;ldquo;喵&amp;rdquo; 了哎！&lt;/p&gt;
+&lt;p&gt;嗨!你知道嘛?今天前台的小妹跟我说&amp;quot;喵&amp;quot;了哎！&lt;/p&gt;
+&lt;p&gt;核磁共振成像 (NMRI) 是什么原理都不知道? JFGI!&lt;/p&gt;
+&lt;p&gt;核磁共振成像(NMRI)是什么原理都不知道?JFGI!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="遇到完整的英文整句特殊名词其内容使用半角符号"&gt;遇到完整的英文整句、特殊名词，其内容使用半角符号
+&lt;/h4&gt;&lt;p&gt;正确：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;乔布斯那句话是怎么说的？「Stay hungry, stay foolish.」&lt;/p&gt;
+&lt;p&gt;推荐你阅读 &lt;em&gt;Hackers &amp;amp; Painters: Big Ideas from the Computer Age&lt;/em&gt;，非常地有趣。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;乔布斯那句话是怎么说的？「Stay hungry，stay foolish。」&lt;/p&gt;
+&lt;p&gt;推荐你阅读《Hackers＆Painters：Big Ideas from the Computer Age》，非常的有趣。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="名词"&gt;名词
+&lt;/h3&gt;&lt;h4 id="专有名词使用正确的大小写"&gt;专有名词使用正确的大小写
+&lt;/h4&gt;&lt;p&gt;正确：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 GitHub 登录&lt;/p&gt;
+&lt;p&gt;我们的客户有 GitHub、Foursquare、Microsoft Corporation、Google、Facebook, Inc.。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 github 登录&lt;/p&gt;
+&lt;p&gt;我们的客户有 github、foursquare、microsoft corporation、google、facebook, inc.。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="不要使用不地道的缩写"&gt;不要使用不地道的缩写
+&lt;/h4&gt;&lt;p&gt;正确：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们需要一位熟悉 TypeScript、HTML5，至少理解一种框架（如 React、Next.js）的前端开发者。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们需要一位熟悉 Ts、h5，至少理解一种框架（如 RJS、nextjs）的 FED。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="争议"&gt;争议
+&lt;/h3&gt;&lt;p&gt;以下用法略带有个人色彩，即：无论是否遵循下述规则，从语法的角度来讲都是&lt;strong&gt;正确&lt;/strong&gt;的。&lt;/p&gt;
+&lt;h4 id="链接之间增加空格"&gt;链接之间增加空格
+&lt;/h4&gt;&lt;p&gt;用法：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请 &lt;a class="link" href="#" &gt;提交一个 issue&lt;/a&gt; 并分配给相关同事。&lt;/p&gt;
+&lt;p&gt;访问我们网站的最新动态，请 &lt;a class="link" href="#" &gt;点击这里&lt;/a&gt; 进行订阅！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对比用法：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请&lt;a class="link" href="#" &gt;提交一个 issue&lt;/a&gt;并分配给相关同事。&lt;/p&gt;
+&lt;p&gt;访问我们网站的最新动态，请&lt;a class="link" href="#" &gt;点击这里&lt;/a&gt;进行订阅！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="简体中文使用直角引号"&gt;简体中文使用直角引号
+&lt;/h4&gt;&lt;p&gt;用法：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「老师，『有条不紊』的『紊』是什么意思？」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对比用法：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“老师，‘有条不紊’的‘紊’是什么意思？”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="实践中碰到的问题"&gt;实践中碰到的问题
+&lt;/h2&gt;&lt;p&gt;在实践「盘古之白」的过程中，我也发现了一些问题。&lt;/p&gt;
+&lt;h3 id="到底该不该加空格"&gt;到底该不该加空格
+&lt;/h3&gt;&lt;p&gt;前面提到了「豆瓣FM」，由于它是一个产品名词，所以需要按照官方定义的格式来书写。那么，是「豆瓣FM是由豆瓣开发的音乐流媒体产品」，还是「豆瓣FM 是由豆瓣开发的音乐流媒体产品」？&lt;/p&gt;
+&lt;p&gt;专有名词内部不加空格，那么外部呢，那些由中文与英文、数字、符号共同组成的名词是不是应该将其当作纯中文对待，去掉与其他中文字符之间的空格呢？&lt;/p&gt;
+&lt;p&gt;如果专有名词由英文、数字、符号组成，且没有被广泛接受的中文译名，是该将其当作中文还是 English 对待呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;fumo如此可爱&lt;/p&gt;
+&lt;p&gt;fumo 如此可爱&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;自从开始思考这个问题之后，我就觉得上面两个版本都看不舒服。&lt;/p&gt;
+&lt;h3 id="全角符号还是半角符号"&gt;全角符号还是半角符号
+&lt;/h3&gt;&lt;p&gt;完整的英文整句使用半角符号，这没有问题，没有人会在英文环境使用全角符号，那不好看，但中文环境呢？&lt;/p&gt;
+&lt;p&gt;逗号、句号、问号、感叹号、冒号、分号、引号，这些符号毫无疑问应该使用全角符号，因为对应的半角符号放在句子中不好看，但也不是所有的半角符号都不适合中文环境。&lt;/p&gt;
+&lt;p&gt;上文有一句「度数／百分比与数字之间不需要增加空格」，使用了全角符号的斜杠，如果我们换成「空格 + 半角符号斜杠 + 空格」会是怎么样呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;度数／百分比（全角符号）&lt;/p&gt;
+&lt;p&gt;度数 / 百分比（半角符号）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;看着还是挺不错的吧。&lt;/p&gt;
+&lt;p&gt;不管是手机还是电脑，输入两个空格加一个半角斜杠一般来说都比输入一个全角斜杠要快，为了一个字符从半角切换到全角再切换回来总归还是有点麻烦的。&lt;/p&gt;
+&lt;p&gt;另外，全角斜杠有时是 45° 的，有时度数又与半角斜杠接近，我不清楚这是为什么，但我觉得 45° 的看起来不太习惯。&lt;/p&gt;
+&lt;h3 id="名词到底长啥样"&gt;名词到底长啥样
+&lt;/h3&gt;&lt;p&gt;「哔哩哔哩」「bilibili」「BiliBili」&lt;/p&gt;
+&lt;p&gt;专有名词使用正确的大小写，可是这个「正确」的大小写要让我去哪确认啊？万一官方自己都混着用，那我可怎么办？&lt;/p&gt;
+&lt;p&gt;如果我要创建一个专有名词，又该如何明确大小写呢，中英文之间的空格又应不应该保留呢？&lt;/p&gt;
+&lt;h3 id="争议与现实"&gt;争议与现实
+&lt;/h3&gt;&lt;p&gt;链接之间增加空格我还是支持的，以后就按这个规则来。&lt;/p&gt;
+&lt;p&gt;至于简体中文使用直角引号还是双引号，我感觉可以灵活一点。&lt;/p&gt;
+&lt;p&gt;课本里用的是双引号，每年出版的各种书也在用双引号，所以我觉得用双引号没问题，虽然它没有直角引号那么醒目，但使用双引号不应该算作错误。&lt;/p&gt;
+&lt;p&gt;在手机上输入直角引号要比输入双引号麻烦不少，所以没必要的话我就用双引号。电脑上我的输入法输入直角引号和输入双引号一样快，那就想用哪个用哪个。反正我的文字主要是写给自己的，自己看着舒服就行。&lt;/p&gt;
+&lt;h3 id="其他问题"&gt;其他问题
+&lt;/h3&gt;&lt;p&gt;空格的宽度不是固定的，网页上的空格比编辑器里的要窄，我个人还是更喜欢网页上的那种宽度，也就是说在写文字的时候我觉得中英文之间隔得太远了。&lt;/p&gt;
+&lt;h2 id="个人规则"&gt;个人规则
+&lt;/h2&gt;&lt;h2 id="参考文献"&gt;参考文献
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/sparanoid/chinese-copywriting-guidelines/" target="_blank" rel="noopener"
+&gt;sparanoid. 中文文案排版指北&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://blog.xiaoquankong.ai/zh/posts/chinese-document-typesetting-specification-spacing-of-pangu/" target="_blank" rel="noopener"
+&gt;Xiaoquan Kong. 「盤古之白」&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://eddy.lu/posts/pangu/" target="_blank" rel="noopener"
+&gt;ed. 不入流的文体｜关于「盘古之白」和「直角引号」&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="碎碎念"&gt;碎碎念
+&lt;/h2&gt;&lt;p&gt;在写这篇文章的时候，我还有个意外发现。如果超链接和中文连在一起，那么在 Hugo 生成的网页中超链接将不会被识别出来，因此无法跳转，就像这样：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;赛钱的妖怪https://pomfret27.github.io/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果在中间加上空格，则是一个正常的可以跳转的超链接，就像这样：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;赛钱的妖怪 &lt;a class="link" href="https://pomfret27.github.io/" target="_blank" rel="noopener"
+&gt;https://pomfret27.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是，当我在 Typora 中写作时，不管怎样都是可以跳转的，这大概是 Typora 的功劳吧。&lt;/p&gt;</description></item><item><title>使用 Hugo + Github 搭建个人博客</title><link>https://pomfret27.github.io/blog/p/build-blog-with-hugo-and-github/</link><pubDate>Tue, 12 Aug 2025 19:13:34 +0800</pubDate><guid>https://pomfret27.github.io/blog/p/build-blog-with-hugo-and-github/</guid><description>&lt;h2 id="搭建思路"&gt;搭建思路
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;Hugo 可以将 Markdown 文件转换为 HTML 文件；&lt;/li&gt;
 &lt;li&gt;GitHub Pages 是 GitHub 提供的一个免费的静态网站托管服务，可用于托管个人网站、博客、文档、项目页面等静态内容；&lt;/li&gt;
