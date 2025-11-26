@@ -13,8 +13,8 @@ const pages = [
   "/docs/tags/",
   "/docs/",
   "/docs/book.min.c6771de2b717b3a99f7c695926d0a9b4813cfb30ae5b8563d1d24cc7b3e5643e.css",
-  "/docs/zh.search-data.min.19e7f4b0ced1d77c275ed99f73679ca4dfe412cbb9f585ef0ad16e5fcb3e0792.json",
-  "/docs/zh.search.min.debddd0f06a2121be9a341602d712489c412bfd8fe68c6e7c511cc244545ee15.js",
+  "/docs/zh.search-data.min.15eadbf05bf3f29d6bd2797bb14b30cb1ac108f66fd95000fe9f341d702df444.json",
+  "/docs/zh.search.min.c5325c70eee8124dee2dc72ad1f8927e6e024cbb4363e649b28edcb05e80cd84.js",
   
 ];
 
